@@ -1,0 +1,13 @@
+button.card-btn {
+  border-radius: 100%;
+  width: 100%;
+  position: relative;
+  border: none;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: black;
+  font-size: 24px; /* cursor: pointer; */
+  font-family: FontAwesome;
+  outline: none;
+  text-align: center;
+}
