@@ -13,7 +13,7 @@ class App extends Component {
     friends,
   };
 
-  removeFriend = (id) => {
+  sortEmployee = (id) => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const friends = this.state.friends.filter((friend) => friend.id !== id);
     // Set this.state.friends equal to the new friends array
@@ -56,13 +56,14 @@ class App extends Component {
           
           <Col size="md-12">
           <FriendCard
+          sortEmployee={this.sortEmployee}
             // removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
             name={friend.name}
             image={friend.image}
             occupation={friend.occupation}
-            location={friend.location}
+            phone={friend.phone}
           />
           </Col>
 
