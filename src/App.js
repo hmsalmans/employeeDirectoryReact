@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import friends from "./friends.json";
 import Row from "./components/Row";
 import Col from "./components/Col";
+import Container from "./components/Container";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -24,32 +25,36 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
-
-        <form className="search" style={{alignContent: "auto"}}>
-          <div className="form-group">
-            <input
-              value={this.state.userInput}
-              name="userInput"
-              type="text"
-              className="form-control"
-              placeholder="Search"
-              id="employee"
-              onChange={this.handleInputChange}
-              style={{
-                width: "100%",
-                margin: "0 auto",
-                marginLeft: "auto",
-                marginRight: "auto",
-                textAlign: "center",
-                
-              }}
-            />{" "}
-          </div>{" "}
-        </form>
-
-        {this.state.friends.map((friend) => (
+        <Container> 
           <Row>
-
+            <Col size="md-12">
+          <form className="search" style={{alignContent: "auto"}}>
+            <div className="form-group">
+              <input
+                value={this.state.userInput}
+                name="userInput"
+                type="text"
+                className="form-control"
+                placeholder="Search"
+                id="employee"
+                onChange={this.handleInputChange}
+                style={{
+                  width: "100%",
+                  margin: "0 auto",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  textAlign: "center",
+                  
+                }}
+              />{" "}
+            </div>{" "}
+          </form>
+          </Col>
+          </Row>
+          <Row>      
+        {this.state.friends.map((friend) => (
+          
+          <Col size="md-12">
           <FriendCard
             // removeFriend={this.removeFriend}
             id={friend.id}
@@ -59,11 +64,13 @@ class App extends Component {
             occupation={friend.occupation}
             location={friend.location}
           />
+          </Col>
 
+         
 
-         </Row>
-
-        ))}
+        ))} 
+        </Row>
+        </Container> 
       </Wrapper>
     );
   }
