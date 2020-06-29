@@ -4,19 +4,15 @@ import "./style.css";
 function FriendCard(props) {
   return (
     <div>
-        <img alt={props.name} src={props.image} className={{width:"100px"}} />
+        <img alt={props.name} src={props.image} className={{width:"25%"}} />&nbsp;&nbsp;&nbsp;
+        <strong>Name:</strong> {props.name}  &nbsp; 
+        <strong>Occupation:</strong> {props.occupation} &nbsp;
+        <strong>Phone:</strong> {props.phone}
+        
       
-      <div className="content">
-        
-            <strong>Name:</strong> {props.name}
-          
-            <strong>Occupation:</strong> {props.occupation}
-          
-            <strong>Phone:</strong> {props.phone}
-        
-      </div>
+      
       <span onClick={() => props.sortEmployee(props.id)} className="remove">
-        𝘅
+        
       </span>
     </div>
   );
