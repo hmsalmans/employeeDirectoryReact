@@ -11,33 +11,44 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends,
+     friends: friends,
+     fliFriends: friends
+     
   };
 
-  /*sortEmployee = (id) => {
+
+
+  filterEmployee = (event) => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter((friend) => friend.id !== id);
+    const userSerch = event.target.value.toUpperCase();
+
+
+   const newOne = this.state.friends.filter((friend) => friend.name.toUpperCase().includes(userSerch));
     // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };*/
+    this.setState({ fliFriends: newOne });
+    
+  };
+
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Employee Directory</Title>
+       {/* <Row fluid isAylanCool number={5}/>*/}
       <Container>
 
         <form className="search" style={{ alignContent: "auto" }}>
           <div className="form-group">
             <input
-              value={this.state.userInput}
+              
               name="userInput"
               type="text"
               className="form-control"
               placeholder="Search"
               id="employee"
-              onChange={this.handleInputChange}
+              onChange={this.filterEmployee}
               style={{
                 width: "100%",
                 margin: "0 auto",
@@ -71,7 +82,7 @@ class App extends Component {
           </div>
         </div>
 
-        <FriendCard friends={this.state.friends} />
+        <FriendCard friends={this.state.fliFriends} />
         </Container>
       </Wrapper>
     );
