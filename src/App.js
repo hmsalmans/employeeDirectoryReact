@@ -73,7 +73,7 @@ updateSort3 = (event) => {
               name="userInput"
               type="text"
               className="form-control"
-              placeholder="Search"
+              placeholder="Search by name"
               id="employee"
               onChange={this.filterEmployee}
               style={{
