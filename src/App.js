@@ -91,20 +91,20 @@ updateSort3 = (event) => {
           <div className="row">
             <div className="col">
               <button className="card-btn">
-                Employee Picture
+                Employee Picture   
               </button>
             </div>
             <div className="col">
-              <button className="card-btn" onClick={ this.updateSort }>Name</button>
+              <button type="button" className="btn btn-link" onClick={ this.updateSort }>Name</button>
             </div>
             <div className="col">
-              <button className="card-btn" onClick={ this.updateSort1 }>Phone</button>
+              <button type="button" className="btn btn-link" onClick={ this.updateSort1 }>Phone</button>
             </div>
             <div className="col">
-              <button className="card-btn" onClick={ this.updateSort2 }>Email</button>
+              <button type="button" className="btn btn-link" onClick={ this.updateSort2 }>Email</button>
             </div>
             <div className="col">
-              <button className="card-btn" onClick={ this.updateSort3 }>DOB</button>
+              <button type="button" className="btn btn-link" onClick={ this.updateSort3 }>DOB</button>
             </div>
           </div>
         </div>
