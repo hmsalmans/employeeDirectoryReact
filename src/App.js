@@ -11,9 +11,9 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-     friends: friends,
+    friends: friends,
      fliFriends: friends
-     
+    
   };
 
 
@@ -28,7 +28,34 @@ class App extends Component {
     this.setState({ fliFriends: newOne });
     
   };
+//sorting of an array of objects https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 
+ updateSort = (event) => {
+   const chosen = event.target.textContent;
+   console.log(chosen); 
+   const sorted = this.state.fliFriends.sort((a, b) => (a.name > b.name) ? 1 : -1) //
+   this.setState ({fliFriends: sorted})
+}
+ 
+updateSort1 = (event) => {
+  const chosen = event.target.textContent;
+  console.log(chosen); 
+  const sorted = this.state.fliFriends.sort((a, b) => (a.phone > b.phone) ? 1 : -1) //
+  this.setState ({fliFriends: sorted})
+}
+updateSort2 = (event) => {
+  const chosen = event.target.textContent;
+  console.log(chosen); 
+  const sorted = this.state.fliFriends.sort((a, b) => (a.email > b.email) ? 1 : -1) //
+  this.setState ({fliFriends: sorted})
+}
+
+updateSort3 = (event) => {
+  const chosen = event.target.textContent;
+  console.log(chosen); 
+  const sorted = this.state.fliFriends.sort((a, b) => (a.dob > b.dob) ? 1 : -1) //
+  this.setState ({fliFriends: sorted})
+}
 
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -68,16 +95,16 @@ class App extends Component {
               </button>
             </div>
             <div className="col">
-              <button className="card-btn">Name</button>
+              <button className="card-btn" onClick={ this.updateSort }>Name</button>
             </div>
             <div className="col">
-              <button className="card-btn">Phone</button>
+              <button className="card-btn" onClick={ this.updateSort1 }>Phone</button>
             </div>
             <div className="col">
-              <button className="card-btn">Email</button>
+              <button className="card-btn" onClick={ this.updateSort2 }>Email</button>
             </div>
             <div className="col">
-              <button className="card-btn">DOB</button>
+              <button className="card-btn" onClick={ this.updateSort3 }>DOB</button>
             </div>
           </div>
         </div>
