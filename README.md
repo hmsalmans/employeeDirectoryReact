@@ -28,7 +28,7 @@ An employee directory is created from a given Json file of employees.
 
 
 # Deployed application link :
-               
+               The application is deployed 
                
 * https://employeesdirectoryreact.herokuapp.com/ 
 
