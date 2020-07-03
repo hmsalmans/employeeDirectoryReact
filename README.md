@@ -19,7 +19,7 @@ An employee directory is created from a given Json file of employees.
                                                 * Date of birth    
 
 
-   From this list of employees, they can be searched by typing in their name into search box individually. Also, emplyees can be sorted based on all of their data types. i.e; once you click on the name link, it will rearrange them alphabatically. Or if you click on the email, phone, dob link, it will will rearrange them accordingly.
+   From this list of employees, they can be searched by typing in their name into search box individually. Also, emplyees can be sorted based on all of their data types. i.e; once you click on the name link, it will rearrange them alphabatically. Or if you click on the email, phone, dob link, it will  rearrange them accordingly.
 
 
 
