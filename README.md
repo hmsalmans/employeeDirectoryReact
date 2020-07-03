@@ -30,7 +30,7 @@ An employee directory is created from a given Json file of employees.
 # Deployed application link :
                
                
-* https://hmsalmans.github.io/Random-Password-Generator/
+* https://employeesdirectoryreact.herokuapp.com/ 
 
 
 
